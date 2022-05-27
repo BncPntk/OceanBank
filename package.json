@@ -1,0 +1,17 @@
+{
+  "name": "oceanbank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss ./src/css/main.css -o ./public/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.24"
+  }
+}
