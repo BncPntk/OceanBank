@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url('/images/bg2.png');
+    /* background-size:auto; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg{
+    @apply bg-ocean-bg;
+}
+
+.left-img{
+    @apply flex flex-col mx-auto lg:w-1/2 drop-shadow-md md:mb-44 sm:mb-40;
+}
+
+.right-text{
+    @apply flex justify-center text-xl text-center cursor-pointer text-ocean-brown-2 xl:text-left hover:text-ocean-brown-1 sm:mt-20;
+}
+
+.signin-btn{
+    @apply h-12 mt-6 font-semibold rounded-full mb-80 text-ocean-bg bg-ocean-button-1 hover:bg-ocean-button-2 w-60 2xl:mb-0 xl:mb-0 hover:delay-75;
+    margin-bottom: 145px;
+}
+
+/* Form */
+
+.form-input{
+    @apply w-full px-3 py-2 mb-3 text-lg leading-tight border-t-8 border-transparent rounded-md shadow appearance-none focus:border-ocean-button-2 focus:outline-none;
+}
+
+.form-label{
+    @apply block mb-2 text-lg font-bold text-ocean-bg;
+}
+
+.form-bg{
+    margin-bottom: 80px;
+}
+.form-btn{
+    @apply h-12 mt-6 font-semibold rounded-full text-ocean-bg bg-ocean-button-1 hover:bg-ocean-button-2 w-60 2xl:mb-0 hover:delay-75;
+}
+.form-close{
+    @apply absolute top-5 right-5 text-ocean-bg hover:text-ocean-button-2;
+}
+.xl-size{
+    min-width: 550px;
+}
+
+
+/* .footer{
+    @apply hidden;
+} */
+
+
+.btn-actions{
+    @apply py-2 md:w-56 rounded-full w-36  md:text-lg 
+}
+.balance{
+   font-family: 'Montserrat', sans-serif;;
+}
+
+
+.money-btns{
+    @apply container flex flex-wrap justify-around mx-auto my-3 overflow-hidden text-center;
+}
+
+.money-tranfser-btn{
+    @apply font-medium bg-gradient-to-br from-ocean-blue-2 to-ocean-blue-1 btn-actions hover:text-ocean-brown-2;
+}
+
+.money-loan-btn{
+    @apply  font-medium btn-actions bg-gradient-to-br from-ocean-yellow-1 to-ocean-yellow-2 hover:text-ocean-brown-2;
+}
+
+/* .transaction-row{
+    @apply ;
+} */
+
+/* .rowstyle{
+   @apply ;
+} */

@@ -4,14 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
     <link href="output.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <title>Ocean Bank</title>
 </head>
 
-<body>
+<body class="bg">
+    <section id="homepage" class="">
+        <!-- Flex Container -->
+        <div
+            class="container flex flex-col items-center px-6 mx-auto mt-40 space-y-0 xl:flex-row lg:space-y-0 lg:mt-24 2xl:mt-72">
 
+            <!-- Left -->
+            <img class="left-img" src="../images/logo.png" alt="Ocean Bank Logo">
+
+            <!-- Right -->
+            <div class="flex flex-col xl:w-1/2 ">
+                <div id="landing" class="mt-0">
+                    <h1
+                        class="max-w-lg pt-0 mt-10 text-3xl font-bold text-center text-white uppercase md:mt-0 xl:ml-24 2xl:pt-52 lg:text-6xl xl:text-left drop-shadow-md ">
+                        Sign up on our app and we'll give you $500
+                    </h1>
+                    <p class="py-8 right-text">
+                        Learn more about the new features
+                        <span class="hidden ml-1 animate-arrow md:flex">→</span>
+                    </p>
+                    <div class="flex justify-center xl:justify-center">
+                        <button id="signin" class="signin-btn">Sign
+                            In</button>
+                    </div>
+                </div>
+
+
+                <!-- Login -->
+                <!-- absolute rounded top-14 right-16 bg-ocean-gray xl-size 2xl:top-40 2xl:right-80 2xl:mr-54 -->
+                <div id="loginform" <!--
+                    class="hidden max-w-lg pt-0 mt-10 rounded md:mt-0 form-bg bg-ocean-gray xl:ml-24 2xl:pt-52 drop-shadow-md ">
+                    -->
+                    <div class="div">
+                        <img class="flex mx-auto mt-4 h-9" src="/images/oceanBank.png" alt="OceanBank Logo">
+                        <svg id="closeBtn" class="form-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
+
+                    </div>
+                    <form class="px-8 py-12 mb-4 ">
+
+                        <div class="mb-4">
+                            <label class="form-label" for="username">
+                                Username
+                            </label>
+                            <input class="form-input" id="username" type="text">
+                        </div>
+
+
+                        <div class="mb-6">
+                            <label class="form-label" for="password">
+                                Password
+                            </label>
+                            <input class="form-input" id="password" type="password">
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <button class="form-btn " type="button">
+                                Sign In
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- </div> -->
+
+    </section>
+
+    <!-- Account -->
+    <section id="user-profile">
+        <nav class="relative p-3 container-fluid bg-ocean-bg drop-shadow-md">
+
+            <div class="flex items-center justify-between">
+                <!-- User -->
+                <div class="pt-2">
+                    <p class="p-2 text-xl text-center">Hello, <span class="font-bold">Bence</span> </p>
+
+                </div>
+                <!-- Logo -->
+                <div class="pt-2">
+                    <img class="hidden h-12 sm:flex" src="/images/logo.png" alt="OceanBank Logo">
+                </div>
+                <!-- Items -->
+                <div class="space-x-10 md:flex">
+                    <p
+                        class="w-32 p-2 font-bold text-center text-white rounded-full bg-ocean-orange-1 hover:bg-ocean-orange-2">
+                        Logout</p>
+                </div>
+            </div>
+        </nav>
+        <!-- Balance -->
+
+
+        <!-- Balance and date -->
+        <div class="container flex flex-wrap items-center mx-auto mt-10 overflow-hidden">
+
+            <div class="self-stretch w-full py-2 overflow-hidden text-center md:py-12 md:text-left sm:w-1/2 md:w-1/2">
+                <p class="text-3xl font-medium text-ocean-brown-2"> Current balance</p>
+
+                <!-- <div class="w-full overflow-hidden sm:w-full md:w-1/2 bg-ocean-bg"> -->
+
+                <p class="text-base text-ocean-brown-1">As of 05/03/2037</p>
+                <!-- </div> -->
+            </div>
+
+            <div class="self-stretch w-full py-6 overflow-hidden text-center md:py-12 md:text-right sm:w-1/2 md:w-1/2">
+                <p id="balance" class="text-6xl text-ocean-button-2"> $<span
+                        class="font-bold balance text-ocean-gray">3840</span></p>
+            </div>
+        </div>
+
+        <!-- action btns -->
+        <div
+            class="container flex flex-wrap justify-around mx-auto my-3 overflow-hidden text-center text-white money-btns">
+            <div class="w-1/2 place-content-center ">
+                <button class="money-tranfser-btn">Transfer money</button>
+            </div>
+
+            <div class="w-1/2 ">
+                <button class="money-loan-btn">Request loan</button>
+            </div>
+        </div>
+
+        <!-- Transactions -->
+        <div
+            class="container flex flex-wrap w-10/12 overflow-auto rounded-md 2xl:h-96 xl:h-64 md:w-8/12 2xl:w-5/12 h-72 drop-shadow-md bg-ocean-transaction-bg ">
+
+            <div class="w-full max-h-32 sm:w-full md:w-full ">
+
+                <!-- 1 transaction -->
+                <div
+                    class="flex flex-wrap pb-3 my-4 overflow-hidden border-b-2 drop-shadow-md border-ocean-transaction-b-border">
+                    <div class="w-1/2 overflow-hidden text-center md:pl-14 sm:w-1/2 md:w-1/2">
+                        <p
+                            class="text-sm font-medium text-white uppercase rounded-full w-36 md:w-44 md:text-base bg-gradient-to-br from-ocean-button-1 to-ocean-button-2">
+                            <span>1</span> deposit
+                        </p>
+                    </div>
+
+                    <div class="w-1/2 overflow-hidden text-right md:pr-32 sm:w-1/2 md:w-1/2">
+                        <p class="text-xl"> <span>$</span>500</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-wrap pb-3 my-4 overflow-hidden border-b-2 drop-shadow-md border-ocean-transaction-b-border">
+                    <div class="w-1/2 overflow-hidden text-center md:pl-14 sm:w-1/2 md:w-1/2">
+                        <p
+                            class="text-sm font-medium text-white uppercase rounded-full w-36 md:w-44 md:text-base bg-gradient-to-br from-ocean-red-1 to-ocean-red-2">
+                            <span>1</span> withdrawal
+                        </p>
+                    </div>
+
+                    <div class="w-1/2 overflow-hidden text-right md:pr-32 sm:w-1/2 md:w-1/2">
+                        <p class="text-xl"> <span>$</span>500</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex justify-center mx-auto mt-20 lg:mt-36">
+            <div class=" text-ocean-bg">
+                Copyright &copy; 2022, <span class=" text-ocean-brown-2">Ocean Bank</span>
+            </div>
+        </div>
+
+    </footer>
     <script src="../src/js/script.js"></script>
 </body>
 
