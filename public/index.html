@@ -46,7 +46,7 @@
 
                 <!-- Login -->
                 <!-- absolute rounded top-14 right-16 bg-ocean-gray xl-size 2xl:top-40 2xl:right-80 2xl:mr-54 -->
-                <div id="loginform" <!--
+                <div id="loginform"
                     class="hidden max-w-lg pt-0 mt-10 rounded md:mt-0 form-bg bg-ocean-gray xl:ml-24 2xl:pt-52 drop-shadow-md ">
                     -->
                     <div class="div">
@@ -72,17 +72,18 @@
                             <label class="form-label" for="password">
                                 Password
                             </label>
-                            <input class="form-input" id="password" type="password">
+                            <input class="form-input" id="pin" type="password" maxlength="4">
                         </div>
 
                         <div class="flex items-center justify-center">
-                            <button class="form-btn " type="button">
+                            <button class="form-btn" id="formSignInBtn" type="button">
                                 Sign In
                             </button>
                         </div>
                     </form>
 
                 </div>
+
             </div>
         </div>
 
@@ -92,24 +93,27 @@
     </section>
 
     <!-- Account -->
-    <section id="user-profile">
-        <nav class="relative p-3 container-fluid bg-ocean-bg drop-shadow-md">
+    <section id="user-profile" class="hidden">
+        <nav class="relative p-3 container-fluid bg-ocean-bg drop-shadow-md ">
 
             <div class="flex items-center justify-between">
                 <!-- User -->
                 <div class="pt-2">
-                    <p class="p-2 text-xl text-center">Hello, <span class="font-bold">Bence</span> </p>
+                    <p class="p-2 text-xl text-center">Hello, <span class="font-bold" id="welcomeName">username</span>
+                    </p>
 
                 </div>
+
                 <!-- Logo -->
                 <div class="pt-2">
                     <img class="hidden h-12 sm:flex" src="/images/logo.png" alt="OceanBank Logo">
                 </div>
                 <!-- Items -->
+
                 <div class="space-x-10 md:flex">
-                    <p
-                        class="w-32 p-2 font-bold text-center text-white rounded-full bg-ocean-orange-1 hover:bg-ocean-orange-2">
-                        Logout</p>
+                    <p class="w-32 p-2 font-bold text-center text-white rounded-full bg-ocean-orange-1 hover:bg-ocean-orange-2 hover:cursor-pointer"
+                        id="logoutBtn">
+                        Logout </p>
                 </div>
             </div>
         </nav>
@@ -120,17 +124,28 @@
         <div class="container flex flex-wrap items-center mx-auto mt-10 overflow-hidden">
 
             <div class="self-stretch w-full py-2 overflow-hidden text-center md:py-12 md:text-left sm:w-1/2 md:w-1/2">
-                <p class="text-3xl font-medium text-ocean-brown-2"> Current balance</p>
-
-                <!-- <div class="w-full overflow-hidden sm:w-full md:w-1/2 bg-ocean-bg"> -->
-
+                <p class="text-4xl font-medium text-ocean-brown-2"> Current balance</p>
                 <p class="text-base text-ocean-brown-1">As of 05/03/2037</p>
-                <!-- </div> -->
+
+
+
+                <p class="px-5 py-1 mx-auto mt-4 text-lg font-medium text-white rounded-full w-max bg-ocean-button-1">
+                    Income:
+                    <span class="" id="incomeLabel"></span>
+                </p>
+                <p class="px-5 py-1 mx-auto my-3 text-lg font-medium text-white rounded-full w-max bg-ocean-red-2">
+                    Outcome:
+                    <span class="" id="outcomeLabel"></span>
+                </p>
+
+
             </div>
 
             <div class="self-stretch w-full py-6 overflow-hidden text-center md:py-12 md:text-right sm:w-1/2 md:w-1/2">
-                <p id="balance" class="text-6xl text-ocean-button-2"> $<span
-                        class="font-bold balance text-ocean-gray">3840</span></p>
+                <p class="text-6xl text-ocean-button-2"> $<span id="balance"
+                        class="font-bold balance text-ocean-gray">3840</span>
+                </p>
+
             </div>
         </div>
 
@@ -147,27 +162,14 @@
         </div>
 
         <!-- Transactions -->
-        <div
-            class="container flex flex-wrap w-10/12 overflow-auto rounded-md 2xl:h-96 xl:h-64 md:w-8/12 2xl:w-5/12 h-72 drop-shadow-md bg-ocean-transaction-bg ">
+        <div id="transactionsContainer"
+            class="container flex flex-wrap w-10/12 overflow-auto rounded-md 2xl:h-96 xl:h-80 md:w-8/12 2xl:w-5/12 h-72 drop-shadow-md bg-ocean-transaction-bg ">
 
             <div class="w-full max-h-32 sm:w-full md:w-full ">
 
-                <!-- 1 transaction -->
-                <div
-                    class="flex flex-wrap pb-3 my-4 overflow-hidden border-b-2 drop-shadow-md border-ocean-transaction-b-border">
-                    <div class="w-1/2 overflow-hidden text-center md:pl-14 sm:w-1/2 md:w-1/2">
-                        <p
-                            class="text-sm font-medium text-white uppercase rounded-full w-36 md:w-44 md:text-base bg-gradient-to-br from-ocean-button-1 to-ocean-button-2">
-                            <span>1</span> deposit
-                        </p>
-                    </div>
 
-                    <div class="w-1/2 overflow-hidden text-right md:pr-32 sm:w-1/2 md:w-1/2">
-                        <p class="text-xl"> <span>$</span>500</p>
-                    </div>
-                </div>
-
-                <div
+                <!-- SAVE -->
+                <!-- <div
                     class="flex flex-wrap pb-3 my-4 overflow-hidden border-b-2 drop-shadow-md border-ocean-transaction-b-border">
                     <div class="w-1/2 overflow-hidden text-center md:pl-14 sm:w-1/2 md:w-1/2">
                         <p
@@ -179,9 +181,8 @@
                     <div class="w-1/2 overflow-hidden text-right md:pr-32 sm:w-1/2 md:w-1/2">
                         <p class="text-xl"> <span>$</span>500</p>
                     </div>
-                </div>
-
-
+                </div> -->
+                <!-- SAVE -->
 
             </div>
         </div>
@@ -196,6 +197,7 @@
         </div>
 
     </footer>
+    <script src="../src/js/data.js"></script>
     <script src="../src/js/script.js"></script>
 </body>
 

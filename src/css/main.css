@@ -7,14 +7,14 @@
 
 body{
     font-family: 'Ubuntu', sans-serif;
-    background-image: url('/images/bg2.png');
-    /* background-size:auto; */
-    background-repeat: no-repeat;
-    background-position: center;
+  
 }
 
+
 .bg{
-    @apply bg-ocean-bg;
+    background-image: url('/images/bg2.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .left-img{
@@ -85,4 +85,30 @@ body{
 
 /* .rowstyle{
    @apply ;
+} */
+
+
+.transaction-html{
+    @apply  flex flex-wrap overflow-hidden border-b-2 border-ocean-transaction-b-border drop-shadow-md;
+    
+}
+
+.transaction-inner-div{
+    @apply w-1/2 overflow-hidden text-center md:pl-14 sm:w-1/2 md:w-1/2 ;
+}
+
+.deposit{
+    @apply text-sm font-medium text-white uppercase rounded-full w-36 md:w-44 md:text-base bg-gradient-to-br from-ocean-button-1 to-ocean-button-2;
+}
+
+.withdrawal{
+    @apply text-sm font-medium text-white uppercase rounded-full w-36 md:w-44 md:text-base bg-gradient-to-br from-ocean-red-1 to-ocean-red-2;
+}
+
+.money-amount{
+    @apply w-1/2 overflow-hidden text-right md:pr-32 sm:w-1/2 md:w-1/2;
+}
+
+/* #user-profile{
+   display: none;
 } */

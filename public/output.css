@@ -493,6 +493,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-0{
   margin-top: 0px;
 }
+.mt-10{
+  margin-top: 2.5rem;
+}
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -505,14 +508,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-6{
   margin-bottom: 1.5rem;
 }
-.mt-10{
-  margin-top: 2.5rem;
-}
 .mt-20{
   margin-top: 5rem;
-}
-.mt-8{
-  margin-top: 2rem;
 }
 .flex{
   display: flex;
@@ -537,6 +534,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-full{
   width: 100%;
+}
+.w-max{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .w-1\/2{
   width: 50%;
@@ -641,6 +643,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(215 109 49 / var(--tw-bg-opacity));
 }
+.bg-ocean-button-1{
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 162 68 / var(--tw-bg-opacity));
+}
+.bg-ocean-red-2{
+  --tw-bg-opacity: 1;
+  background-color: rgb(177 13 24 / var(--tw-bg-opacity));
+}
 .bg-ocean-transaction-bg{
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
@@ -648,16 +658,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
-.from-ocean-button-1{
-  --tw-gradient-from: #5ea244;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(94 162 68 / 0));
-}
 .from-ocean-red-1{
   --tw-gradient-from: #c1121f;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(193 18 31 / 0));
-}
-.to-ocean-button-2{
-  --tw-gradient-to: #39b54a;
 }
 .to-ocean-red-2{
   --tw-gradient-to: #b10d18;
@@ -688,6 +691,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -715,9 +726,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .text-6xl{
   font-size: 3.75rem;
@@ -767,15 +786,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 body{
     font-family: 'Ubuntu', sans-serif;
-    background-image: url('/images/bg2.png');
-    /* background-size:auto; */
-    background-repeat: no-repeat;
-    background-position: center;
+  
 }
 
+
 .bg{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
+    background-image: url('/images/bg2.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .left-img{
@@ -1099,16 +1117,121 @@ body{
    @apply ;
 } */
 
+
+.transaction-html{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-bottom-width: 2px;
+  border-color: #8f8f8f3d;
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transaction-inner-div{
+  width: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media (min-width: 640px){
+
+  .transaction-inner-div{
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px){
+
+  .transaction-inner-div{
+    width: 50%;
+    padding-left: 3.5rem;
+  }
+}
+
+.deposit{
+  width: 9rem;
+  border-radius: 9999px;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #5ea244;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(94 162 68 / 0));
+  --tw-gradient-to: #39b54a;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+
+  .deposit{
+    width: 11rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.withdrawal{
+  width: 9rem;
+  border-radius: 9999px;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #c1121f;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(193 18 31 / 0));
+  --tw-gradient-to: #b10d18;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+
+  .withdrawal{
+    width: 11rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.money-amount{
+  width: 50%;
+  overflow: hidden;
+  text-align: right;
+}
+
+@media (min-width: 640px){
+
+  .money-amount{
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px){
+
+  .money-amount{
+    width: 50%;
+    padding-right: 8rem;
+  }
+}
+
+/* #user-profile{
+   display: none;
+} */
+
+.hover\:cursor-pointer:hover{
+  cursor: pointer;
+}
+
 .hover\:bg-ocean-orange-2:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(208 100 39 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
-
-  .sm\:mt-0{
-    margin-top: 0px;
-  }
 
   .sm\:flex{
     display: flex;
@@ -1162,10 +1285,6 @@ body{
     padding-right: 8rem;
   }
 
-  .md\:pt-0{
-    padding-top: 0px;
-  }
-
   .md\:text-left{
     text-align: left;
   }
@@ -1208,8 +1327,8 @@ body{
     margin-left: 6rem;
   }
 
-  .xl\:h-64{
-    height: 16rem;
+  .xl\:h-80{
+    height: 20rem;
   }
 
   .xl\:w-1\/2{
